@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Piano</title>
+	<style type="text/css">
+		h3{
+			text-align: center;
+			text-decoration: underline;
+		}
+
+		#Piano{
+			border: 3px solid black;
+			width: 400px;
+			height: 150px;
+			margin-left: 500px;
+			margin-top: 100px;
+			
+		}
+
+		#top-frame{
+			border: 1px solid black;
+			border-bottom: 2px solid black;
+			width: 400px;
+			height: 100px;
+			background: black;
+		}
+
+		#text{
+			text-align: center;
+			color: white;
+			text-transform: bold;
+			font-weight: 200%;
+		}
+
+		#keys{
+			border: 1px solid black;
+			width: 400px;
+			height: 45px;
+			display: grid;
+			grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
+		}
+
+		
+			
+		#C{
+			grid-column-start: 1;
+			border: 1px solid black;
+		}
+
+		#c-btn{
+			width: 50px;
+			height: 45px;
+		}
+
+		#D{
+			grid-column-start: 2;
+			border: 1px solid black;
+		}
+
+		#d-btn{
+			width: 50px;
+			height: 45px;
+		}
+
+
+		#E{
+			grid-column-start: 3;
+			border: 1px solid black;
+		}
+
+		#e-btn{
+			width: 50px;
+			height: 45px;
+		}
+
+
+		#F{
+			grid-column-start: 4;
+			border: 1px solid black;
+		}
+
+		#f-btn{
+			width: 50px;
+			height: 45px;
+		}
+
+
+		#G{
+			grid-column-start: 5;
+			border: 1px solid black;
+		}
+
+		#g-btn{
+			width: 50px;
+			height: 45px;
+		}
+
+
+		#A{
+			grid-column-start: 6;
+			border: 1px solid black;
+		}
+
+		#a-btn{
+			width: 50px;
+			height: 45px;
+		}
+
+
+		#B{
+			grid-column-start: 7;
+			border: 1px solid black;
+		}
+
+		#b-btn{
+			width: 50px;
+			height: 45px;
+		}
+
+
+		#C2{
+			grid-column-start: 8;
+			border: 1px solid black;
+		}
+
+		#c2-btn{
+			width: 50px;
+			height: 45px;
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+	<h3>Piano In JS</h3>
+
+	<div id="Piano">
+		<div id="top-frame"><h2 id="text">PIANO</h2></div>
+		<div id="keys">
+			<div id="C"><button value="c" id="c-btn" onclick="play(this.id, this.value)"></button></div>
+			<div id="D"><button value="d" id="d-btn" onclick="play(this.id, this.value)"></button></div>
+			<div id="E"><button value="e" id="e-btn" onclick="play(this.id, this.value)"></button></div>
+			<div id="F"><button value="f" id="f-btn" onclick="play(this.id, this.value)"></button></div>
+			<div id="G"><button value="g" id="g-btn" onclick="play(this.id, this.value)"></button></div>
+			<div id="A"><button value="a" id="a-btn" onclick="play(this.id, this.value)"></button></div>
+			<div id="B"><button value="b" id="b-btn" onclick="play(this.id, this.value)"></button></div>
+			<div id="C2"><button value="c2" id="c2-btn" onclick="play(this.id, this.value)"></button></div>
+		</div>
+	</div>
+
+	<audio id="c-btnc" src="do.WAV"></audio>
+	<audio id="d-btnd" src="re.WAV"></audio>
+	<audio id="e-btne" src="mi.WAV"></audio>
+	<audio id="f-btnf" src="fa.WAV"></audio>
+	<audio id="g-btng" src="so.WAv"></audio>
+	<audio id="a-btna" src="la.WAV"></audio>
+	<audio id="b-btnb" src="ti.WAV"></audio>
+	<audio id="c2-btnc2" src="doo.WAV"></audio>
+
+
+
+	
+
+	<script type="text/javascript">
+		
+		function play(clicked_id, value){
+
+		
+
+			var audio = document.getElementById(clicked_id+value)
+
+			audio.play()
+
+
+		}
+	</script>
+
+</body>
+</html>
